@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <P> TEST  </P>
+    <P> <%=request.getAttribute("username") %></P>
 </body>
 </html>
