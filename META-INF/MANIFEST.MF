@@ -62,4 +62,5 @@ Require-Bundle: org.springframework.aop;bundle-version="4.0.0",
  org.springframework.transaction;bundle-version="4.0.0",
  org.springframework.uaa.client;bundle-version="1.0.3",
  org.springframework.web;bundle-version="4.0.0",
- org.springframework.web.servlet;bundle-version="4.0.0"
+ org.springframework.web.servlet;bundle-version="4.0.0",
+ org.apache.commons.logging;bundle-version="1.0.4"
