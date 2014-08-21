@@ -7,8 +7,8 @@
             name
             Member[]
         +Random
-            Random team
-            Random theme
+            Random team - done 
+            Random theme - done without outer file
    +Login
         
    MainPage
