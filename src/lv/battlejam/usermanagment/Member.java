@@ -1,12 +1,21 @@
 package lv.battlejam.usermanagment;
 
+import java.io.Serializable;
 
-public class Member {
 
+public class Member implements Serializable{
+
+    private static final long serialVersionUID = 3089308838985141008L;
     private String name;
     private String surname;
     private Team team;
 
+    
+    public Member(String name,String surname){
+        this.name = name;
+        this.surname = surname;
+    }
+    
     public String getName() {
         return name;
     }

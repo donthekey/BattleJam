@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Team {
 
-    private ArrayList<Member> members;
+    private ArrayList<Member> members = new ArrayList<Member>();
 
     private String name;
 
@@ -28,4 +28,6 @@ public class Team {
         this.name = name;
     }
 
+    
+   
 }

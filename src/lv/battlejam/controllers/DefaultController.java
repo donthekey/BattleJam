@@ -18,9 +18,7 @@ public class DefaultController {
     public String login(Model map, HttpSession session) {
         String username = System.getProperty("user.name");
         if (username.contains(".")) {
-            Member member = new Member();
-            member.setName(username.split("\\.")[0]);
-            member.setSurname(username.split("\\.")[1]);
+            Member member = new Member(username.split("\\.")[0],username.split("\\.")[1]);
             session.setAttribute("user", member);
         }
         return "redirect:/home";
