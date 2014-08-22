@@ -1,0 +1,14 @@
+@CHARSET "ISO-8859-1";
+
+#memberList {
+    background: #ed6464;
+    width: auto;
+    text-align: center;
+}
+#memberList li{
+    font-size :small;
+}
+#memberList li.team_name {
+    list-style-type: none;
+    font-size : large;
+}

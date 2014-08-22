@@ -30,4 +30,10 @@ public class DefaultController {
         return "jsp/home.jsp";
     }
 
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(Model map) {
+
+        return "jsp/login.jsp";
+    }
+    
 }
