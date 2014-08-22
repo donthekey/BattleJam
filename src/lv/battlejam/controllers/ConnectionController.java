@@ -16,25 +16,17 @@ public class ConnectionController {
 
     static private Connection conn = null;
 
-    public static void main(String[] args) {
+    static {
         try {
             Class.forName(JDBC_DRIVER);
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
         } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (final SQLException se) {
-                se.printStackTrace();
-            }
+            
         }
     }
 
     public static Connection getDataSource() {
 
-      
         return conn;
     }
 }

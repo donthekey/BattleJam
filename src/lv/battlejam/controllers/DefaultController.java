@@ -2,6 +2,7 @@ package lv.battlejam.controllers;
 
 import javax.servlet.http.HttpSession;
 
+import lv.battlejam.dbmanagment.AccountManagment;
 import lv.battlejam.usermanagment.Member;
 
 import org.springframework.stereotype.Controller;
@@ -45,7 +46,7 @@ public class DefaultController {
                        @RequestParam("password") String password, Model map,
                        HttpSession session) {
 
-        if (username.equals("edgars.gars") && password.equals("change")) {
+        if (AccountManagment.login(username, password)) {
             if (username.contains(".")) {
                 Member member =
                     new Member(username.split("\\.")[0],
