@@ -12,13 +12,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import utils.MyLogger;
+
+
+
 @Controller
 @SessionAttributes("user")
 public class DefaultController {
-
+    
+   
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String login(Model map, HttpSession session) {
-
+        MyLogger a = new MyLogger();
+        a.log("YOLO");
         if (session.getAttribute("user") == null) {
             return "redirect:/login";
         } else {
