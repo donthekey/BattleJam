@@ -16,6 +16,8 @@
 <title>BattleJam</title>
 </head>
 <body>
+
+<img src="http://mfbbva.org/a/uploads/2008/03/5_accenture1.jpg" style="width: 100%;height:20%;">
     <div id='topmenu'>
         <ul>
             <li class='active'><a href='#'><span>Home</span></a></li>
@@ -26,7 +28,7 @@
     </div>
     <div id='memberList'>
         <%
-            ArrayList<Team> teamList = Generation.generateTeams();    
+     //       ArrayList<Team> teamList = Generation.generateTeams();    
         %>
         
         
@@ -34,9 +36,9 @@
 
 
     <%
-        out.print("<p>Welcome "
-            + ((Member) session.getAttribute("user")).getName()
-                .toUpperCase() + "</p>");
+       out.print("<p>Welcome "
+           + ((Member) session.getAttribute("user")).getName()
+               .toUpperCase() + "</p>");
     %>
 
 
