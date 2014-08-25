@@ -1,5 +1,7 @@
 package lv.battlejam.controllers;
 
+import java.io.IOException;
+
 import javax.servlet.http.HttpSession;
 
 import lv.battlejam.dbmanagment.AccountManagment;
@@ -23,8 +25,6 @@ public class DefaultController {
    
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String login(Model map, HttpSession session) {
-        MyLogger a = new MyLogger();
-        a.log("YOLO");
         if (session.getAttribute("user") == null) {
             return "redirect:/login";
         } else {
