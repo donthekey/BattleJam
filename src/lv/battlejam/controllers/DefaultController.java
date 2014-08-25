@@ -1,7 +1,5 @@
 package lv.battlejam.controllers;
 
-import java.io.IOException;
-
 import javax.servlet.http.HttpSession;
 
 import lv.battlejam.dbmanagment.AccountManagment;
@@ -14,17 +12,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import utils.MyLogger;
-
-
-
 @Controller
 @SessionAttributes("user")
 public class DefaultController {
-    
-   
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String login(Model map, HttpSession session) {
+
         if (session.getAttribute("user") == null) {
             return "redirect:/login";
         } else {
@@ -34,9 +28,10 @@ public class DefaultController {
 
     @RequestMapping(value = "/home", method = RequestMethod.GET)
     public String home(Model map, HttpSession session) {
-        if(session.getAttribute("user") == null){
+
+        if (session.getAttribute("user") == null) {
             return "redirect:/login";
-        }else{
+        } else {
             return "jsp/home.jsp";
         }
     }
@@ -60,7 +55,7 @@ public class DefaultController {
                 session.setAttribute("user", member);
             }
             return "redirect:/home";
-        }else{
+        } else {
             return "redirect:/login?error=1";
         }
     }
